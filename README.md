@@ -1,7 +1,7 @@
 # Mural Digital (Django + SQLite)
 
 Projeto de uma aplicação Django que exibe banners cadastrados pelo admin em um carrossel Bootstrap.
-O projeto está otimizado para o navegado google chrome para android 10 visando reutilizar equipamento tvbox doados a instituição.
+O projeto está otimizado para o navegador google chrome android 10. O objetivo é reutilizar equipamento tvbox doados para instituição com a exibição de murais interativos.
 
 **Características**
 - Django + SQLite

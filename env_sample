@@ -1,0 +1,2 @@
+SECRET_KEY=digite-sua-key-production
+DEBUG=False

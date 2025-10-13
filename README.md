@@ -25,3 +25,4 @@ O projeto está otimizado para o navegado google chrome para android 10 visando 
 **Observações**
 - As imagens devem ter resolução Full HD (1920x1080) para melhor resultado.
 - Formatos permitidos: jpg, jpeg, png, gif (imagens).
+- Altere o env_sample renomeando para '.env' e modifique com as suas variáveis de produção.

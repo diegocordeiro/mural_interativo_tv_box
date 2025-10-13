@@ -1,0 +1,15 @@
+<div id="carouselContainer">
+  {% for b in banners %}
+  <div class="carousel-item {% if forloop.first %}active{% endif %}">
+    {%if b.imagem %}
+      <img src="{{ b.imagem.url }}" alt="{{ b.titulo }}">
+    {% endif %}
+
+    {% if b.titulo %}
+    <div class="carousel-caption">
+      <h5>{{ b.titulo }}</h5>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>

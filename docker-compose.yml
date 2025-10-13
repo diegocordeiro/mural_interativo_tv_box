@@ -30,8 +30,3 @@ services:
       - "80:80"
     depends_on:
       - web
-
-# networks:
-#   default:
-#     external:
-#       name: prod_net

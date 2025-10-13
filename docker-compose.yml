@@ -1,0 +1,37 @@
+version: '3.9'
+
+services:
+
+  web:
+    build: .
+    command: >
+      sh -c "python${py:-3} manage.py migrate &&
+             python${py:-3} manage.py collectstatic --noinput &&
+             gunicorn project.wsgi:application -b 0.0.0.0:8000"
+    volumes:
+      - ./staticfiles:/app/staticfiles
+      - ./media:/app/media
+      - ./db.sqlite3:/app/db.sqlite3
+    environment:
+      - DEBUG=False
+      - ENVIRONMENT=production
+    env_file:
+      - .env
+
+  nginx:
+    image: nginx:latest
+    depends_on:
+      - web
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./staticfiles:/staticfiles
+      - ./media:/media
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+
+# networks:
+#   default:
+#     external:
+#       name: prod_net

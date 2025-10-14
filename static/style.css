@@ -19,7 +19,7 @@ html, body {
   top: 0;
   left: 0;
   display: none;
-  text-align: center; /* centraliza imagem/vídeo horizontalmente */
+  text-align: center; /* centraliza imagem horizontalmente */
 }
 
 .carousel-item img{

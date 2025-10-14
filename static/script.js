@@ -1,5 +1,5 @@
 (function(){
-    var displayTime = 10000; // tempo de exibição de cada slide (10s)
+    var displayTime = 20000; // tempo de exibição de cada slide (10s)
     var pauseTime = 0;   // pausa entre as transições
     var container = document.getElementById('carouselContainer');
     var items = container.getElementsByClassName('carousel-item');

@@ -11,7 +11,7 @@ services:
     volumes:
       - ./staticfiles:/app/staticfiles
       - ./media:/app/media
-      - ./db.sqlite3:/app/db.sqlite3
+      - ./db:/app/db
     environment:
       - DEBUG=False
       - ENVIRONMENT=production
